@@ -2,7 +2,11 @@ import { Button } from '@/components/ui/button'
 import { Info, HandHeart } from "lucide-react"
 import 'animate.css'
 
-export function Hero() {
+interface HeroProps {
+    onSolicitarClick: () => void
+  }
+
+export function Hero({ onSolicitarClick }: HeroProps) {
     return (
         <div className="flex-1 text-white flex flex-col justify-center max-w-xl gap-6">
             <h1 className="text-5xl font-bold leading-tight">
@@ -18,7 +22,7 @@ export function Hero() {
                 </span>
             </p>
             <div className='space-x-3'>
-                <Button className="bg-yellow-400 hover:bg-yellow-500 text-black text-base font-semibold px-6 py-6 animate__animated animate__pulse">
+                <Button onClick={onSolicitarClick} className="bg-yellow-400 hover:bg-yellow-500 text-black text-base font-semibold px-6 py-6 animate__animated animate__pulse">
                 <HandHeart className="w-5 h-5 mr-2" />
                 Solicitar Equipamento
                 </Button>

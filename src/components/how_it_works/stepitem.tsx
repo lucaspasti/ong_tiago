@@ -7,15 +7,15 @@ interface StepItemProps {
   
   export function StepItem({ number, title, description, color }: StepItemProps) {
     return (
-    <div className="flex items-start gap-4 mb-6">
-      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${color}`}>
-        {number}
+      <div className="flex items-start gap-4 mb-6">
+        <div className={`min-w-9 min-h-9 rounded-full flex items-center justify-center text-white font-semibold text-sm ${color}`}>
+          {number}
+        </div>
+        <div>
+          <h4 className="font-semibold text-xl">{title}</h4>
+          <p className="text-gray-600 text-base">{description}</p>
+        </div>
       </div>
-      <div>
-        <h4 className="font-semibold text-xl">{title}</h4>
-        <p className="text-gray-600 text-base">{description}</p>
-      </div>
-    </div>
     );
   }
   

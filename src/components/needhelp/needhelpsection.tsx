@@ -2,9 +2,13 @@ import { HelpCard } from "./helpcard"
 import { Button } from "@/components/ui/button"
 import { Phone, Mail, MapPin, HandHelping } from "lucide-react"
 
-export function NeedHelpSection() {
+interface NeedHelpSectionProps {
+  onSolicitarClick: () => void
+}
+
+export function NeedHelpSection({ onSolicitarClick }: NeedHelpSectionProps) {
   return (
-    <section className="bg-white py-20 px-4">
+    <section id='contato' className="bg-white py-20 px-4 scroll-mt-24">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-2">Precisa de Ajuda?</h2>
         <p className="text-muted-foreground mb-12">
@@ -33,6 +37,7 @@ export function NeedHelpSection() {
         </div>
 
         <Button
+        onClick={onSolicitarClick}
         size="lg"
         className="h-14 text-white text-xl font-semibold w-full max-w-md mx-auto bg-gradient-to-r from-blue-500 to-purple-500 transition-transform duration-300 ease-in-out transform hover:scale-105"
         >

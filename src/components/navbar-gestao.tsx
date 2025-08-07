@@ -1,0 +1,30 @@
+import Link from "next/link"
+import { User } from "lucide-react"
+
+export function NavbarGestao() {
+  return (
+    <header className="fixed top-0 z-50 w-full bg-white shadow-xl">
+      <div className="h-24 flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Link href="/gestao" className="flex items-center gap-4">
+          <div className="bg-blue-500 p-3 rounded-full">
+            <span className="text-white text-lg">🤍</span>
+          </div>
+          <div className="flex flex-col space-y-1 mt-2">
+            <span className="text-xl font-bold leading-none">Lacre Fraterno</span>
+            <span className="text-sm text-muted-foreground -mt-1">
+              Sistema de Gestão de Equipamentos
+            </span>
+          </div>
+        </Link>
+        <div className="flex items-center gap-2">
+          <span className="text-gray-700 font-medium">Bem-vindo, Administrador</span>
+          <div className="bg-blue-500 p-2 rounded-full">
+            <User className="text-white w-6 h-6" />
+          </div>
+        </div>
+      </div>
+      {/* Linha azul abaixo da navbar */}
+      <div className="w-full h-1 bg-blue-400"></div>
+    </header>
+  );
+}

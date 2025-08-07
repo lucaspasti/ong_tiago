@@ -28,15 +28,15 @@ export function Navbar() {
             <NavigationMenuList className="flex gap-6">
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="#sobre" className="text-lg font-semibold text-muted-foreground hover:text-foreground transition">
-                    Sobre
+                  <Link href="#impacto" className="text-lg font-semibold text-muted-foreground hover:text-foreground transition">
+                    Impacto
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="#impacto" className="text-lg font-semibold text-muted-foreground hover:text-foreground transition">
-                    Impacto
+                  <Link href="#sobre" className="text-lg font-semibold text-muted-foreground hover:text-foreground transition">
+                    Sobre
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>

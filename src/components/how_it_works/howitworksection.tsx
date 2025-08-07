@@ -6,7 +6,7 @@ import { faWheelchair, faCrutch, faPersonWalkingWithCane, faPersonWalking } from
 
 export function HowItWorksSection() {
     return (
-      <section className="bg-gray-50 py-20">
+      <section id='sobre' className="bg-gray-50 py-20 scroll-mt-24">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-10 items-stretch">
             {/* Etapas */}

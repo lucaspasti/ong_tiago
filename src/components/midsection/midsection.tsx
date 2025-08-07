@@ -61,7 +61,7 @@ const dados: CardData[] = [ // dados do backend
 
 export function MidSection() {
     return (
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id='impacto' className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
             <div className="text-center py-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
                     Nosso Impacto em Florianópolis
