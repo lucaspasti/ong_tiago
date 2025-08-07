@@ -3,6 +3,9 @@
 import { useState } from "react"
 import { MenuGestao } from "@/components/menu-gestao"
 import { NavbarGestao } from "@/components/navbar-gestao"
+import { EstoqueSection } from "@/components/estoque/estoquesection"
+import { BeneficiariosSection } from "@/components/beneficiarios/beneficiariossection"
+import { EmprestimosSection } from "@/components/emprestimos/emprestimosection"
 
 export default function GestaoPage() {
   const [abaAtiva, setAbaAtiva] = useState<"estoque" | "beneficiarios" | "emprestimos" | "historico" | "relatorios">("estoque")
@@ -19,9 +22,9 @@ export default function GestaoPage() {
             </div>
 
 
-            {abaAtiva === "estoque" && <p>Aba Estoque</p>}
-            {abaAtiva === "beneficiarios" && <p>Aba Beneficiarios</p>}
-            {abaAtiva === "emprestimos" && <p>Aba Empréstimos</p>}
+            {abaAtiva === "estoque" && <EstoqueSection />}
+            {abaAtiva === "beneficiarios" && <BeneficiariosSection />}
+            {abaAtiva === "emprestimos" && <EmprestimosSection />}
             {abaAtiva === "historico" && <p>Aba Histórico</p>}
             {abaAtiva === "relatorios" && <p>Aba Relatórios</p>}
         </div>

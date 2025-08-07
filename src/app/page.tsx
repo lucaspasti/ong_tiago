@@ -7,7 +7,7 @@ import { MidSection } from "@/components/midsection/midsection"
 import { HowItWorksSection } from "@/components/how_it_works/howitworksection"
 import { NeedHelpSection } from "@/components/needhelp/needhelpsection"
 import { Footer } from "@/components/ui/footer"
-import FormularioSolicitacaoModal from '@/components/solicitacao/formulatiosolicitacao'
+import FormularioSolicitacaoModal from '@/components/solicitacao/form-solicitacao'
 import { Navbar } from "@/components/navbar"
 
 export default function Home() {
