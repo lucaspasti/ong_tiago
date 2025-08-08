@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Equipamento } from "./form-equip"
+import type { Equipamento } from "./form-equip"
 
 type Props = {
   equipamento: Equipamento
@@ -8,7 +8,7 @@ type Props = {
 }
 
 export function FormEditarEquip({ equipamento, onSalvar, onFechar }: Props) {
-  const [form, setForm] = useState(equipamento)
+  const [form, setForm] = useState<Equipamento>(equipamento)
 
   useEffect(() => {
     setForm(equipamento)

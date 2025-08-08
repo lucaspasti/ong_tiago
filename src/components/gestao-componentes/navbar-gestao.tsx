@@ -6,13 +6,13 @@ export function NavbarGestao() {
     <header className="fixed top-0 z-50 w-full bg-white shadow-xl">
       <div className="h-24 flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <Link href="/gestao" className="flex items-center gap-4">
-          <div className="bg-blue-500 p-3 rounded-full">
+          <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-3 rounded-full">
             <span className="text-white text-lg">🤍</span>
           </div>
           <div className="flex flex-col space-y-1 mt-2">
             <span className="text-xl font-bold leading-none">Lacre Fraterno</span>
             <span className="text-sm text-muted-foreground -mt-1">
-              Sistema de Gestão de Equipamentos
+              Transformando lacres em esperança
             </span>
           </div>
         </Link>

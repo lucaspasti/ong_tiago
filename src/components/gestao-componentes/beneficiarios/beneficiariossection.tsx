@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { FormBenef, Beneficiario } from "./form-benef"
-import { FaSearch, FaListUl, FaEdit, FaTrash } from "react-icons/fa"
+import { FaSearch, FaUsers , FaEdit, FaTrash } from "react-icons/fa"
 import { FormEditarBenef } from "./form-editarbenef"
 
 const MOCK_BENEFICIARIOS: Beneficiario[] = [
@@ -51,15 +51,16 @@ export function BeneficiariosSection() {
   }
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6">
+    <div className="flex flex-col lg:flex-row gap-6 items-start"> 
       <FormBenef
         adicionarBeneficiario={novo => setBeneficiarios(prev => [...prev, novo])}
       />
 
-      <div className="bg-white rounded-lg shadow-md p-6 w-full">
+      <div className="flex-1 self-start bg-white rounded-lg shadow-md p-6 w-full">
+        {/* header + busca */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <FaListUl className="text-blue-600" />
+            <FaUsers className="text-blue-600" />
             <h3 className="text-lg font-semibold">Beneficiários Cadastrados</h3>
           </div>
 
@@ -94,23 +95,33 @@ export function BeneficiariosSection() {
                 <td>{b.telefone}</td>
                 <td>{b.cidade}</td>
                 <td>
-                  <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-600">
-                    Ativo
+                  <span
+                    className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      b.status === "Ativo"
+                        ? "bg-green-100 text-green-600"
+                        : "bg-red-100 text-red-600"
+                    }`}
+                  >
+                    {b.status}
                   </span>
                 </td>
-                <td className="flex gap-2">
-                  <button
-                    className="text-blue-600 hover:text-blue-800"
-                    onClick={() => setEditando(b)}
-                  >
-                    <FaEdit />
-                  </button>
-                  <button
-                    className="text-red-600 hover:text-red-800"
-                    onClick={() => setBeneficiarios(prev => prev.filter((_, j) => j !== i))}
-                  >
-                    <FaTrash />
-                  </button>
+                <td className="py-2">
+                  <div className="flex items-center gap-3">
+                    <button
+                      className="text-blue-600 hover:text-blue-800"
+                      onClick={() => setEditando(b)}
+                    >
+                      <FaEdit />
+                    </button>
+                    <button
+                      className="text-red-600 hover:text-red-800"
+                      onClick={() =>
+                        setBeneficiarios(prev => prev.filter((_, j) => j !== i))
+                      }
+                    >
+                      <FaTrash />
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
@@ -118,14 +129,13 @@ export function BeneficiariosSection() {
         </table>
       </div>
 
-    {editando && (
-    <FormEditarBenef
-        beneficiario={editando}
-        onSalvar={atualizarBeneficiario}
-        onFechar={() => setEditando(null)}
-    />
-    )}
-
+      {editando && (
+        <FormEditarBenef
+          beneficiario={editando}
+          onSalvar={atualizarBeneficiario}
+          onFechar={() => setEditando(null)}
+        />
+      )}
     </div>
   )
 }

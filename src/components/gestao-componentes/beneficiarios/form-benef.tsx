@@ -57,7 +57,7 @@ export function FormBenef({ adicionarBeneficiario }: FormBeneficiarioProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6 w-full max-w-xs">
+    <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6 w-full max-w-sm">
       <div className="flex items-center gap-2 mb-4">
         <FaUserPlus className="text-green-600" />
         <h2 className="text-lg font-semibold">Cadastrar Beneficiário</h2>

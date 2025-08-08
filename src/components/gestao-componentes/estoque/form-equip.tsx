@@ -4,13 +4,12 @@ import { useState } from "react"
 import { FaPlusCircle } from "react-icons/fa"
 
 export type Equipamento = {
-    tipo: string
-    descricao: string
-    codigo: string
-    estado: string
-    status: "Disponível" | "Emprestado"
-  }
-  
+  tipo: string
+  descricao: string
+  codigo: string
+  estado: "Excelente" | "Bom" | "Regular"
+  status: "Disponível" | "Emprestado"
+}
 
 type FormEquipamentoProps = {
   adicionarEquipamento: (equipamento: Equipamento) => void
@@ -20,19 +19,18 @@ export function FormEquipamento({ adicionarEquipamento }: FormEquipamentoProps) 
   const [tipo, setTipo] = useState("")
   const [descricao, setDescricao] = useState("")
   const [codigo, setCodigo] = useState("")
-  const [estado, setEstado] = useState("Excelente")
+  const [estado, setEstado] = useState<"Excelente" | "Bom" | "Regular">("Excelente")
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    
+
     const novoEquipamento: Equipamento = {
-        tipo,
-        descricao,
-        codigo,
-        estado,
-        status: "Disponível",
-      }
-      
+      tipo,
+      descricao,
+      codigo,
+      estado,
+      status: "Disponível",
+    }
 
     adicionarEquipamento(novoEquipamento)
 
@@ -92,7 +90,7 @@ export function FormEquipamento({ adicionarEquipamento }: FormEquipamentoProps) 
         <label className="block text-sm mb-1">Estado</label>
         <select
           value={estado}
-          onChange={(e) => setEstado(e.target.value)}
+          onChange={(e) => setEstado(e.target.value as "Excelente" | "Bom" | "Regular")}
           className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm bg-gray-100"
         >
           <option value="Excelente">Excelente</option>
@@ -103,7 +101,7 @@ export function FormEquipamento({ adicionarEquipamento }: FormEquipamentoProps) 
 
       <button
         type="submit"
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-md text-sm transition"
+        className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-2 rounded-md text-sm transition"
       >
         + Adicionar ao Estoque
       </button>

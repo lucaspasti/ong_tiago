@@ -1,14 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-import { Hero } from "@/components/hero"
-import { CardHero } from "@/components/cardhero"
-import { MidSection } from "@/components/midsection/midsection"
-import { HowItWorksSection } from "@/components/how_it_works/howitworksection"
-import { NeedHelpSection } from "@/components/needhelp/needhelpsection"
+import { Hero } from "@/components/home-componentes/hero"
+import { CardHero } from "@/components/home-componentes/cardhero"
+import { MidSection } from "@/components/home-componentes/midsection/midsection"
+import { HowItWorksSection } from "@/components/home-componentes/how_it_works/howitworksection"
+import { NeedHelpSection } from "@/components/home-componentes/needhelp/needhelpsection"
 import { Footer } from "@/components/ui/footer"
-import FormularioSolicitacaoModal from '@/components/solicitacao/form-solicitacao'
-import { Navbar } from "@/components/navbar"
+import FormularioSolicitacaoModal from '@/components/home-componentes/solicitacao/form-solicitacao'
+import { Navbar } from "@/components/home-componentes/navbar-home"
 
 export default function Home() {
   const [formOpen, setFormOpen] = useState(false)
