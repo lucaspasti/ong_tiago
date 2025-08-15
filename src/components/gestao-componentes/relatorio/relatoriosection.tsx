@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa"
 
 import { Equipamento } from "../estoque/form-equip"
-import { Accessibility, } from "lucide-react"
 
 type Emprestimo = {
   id: number

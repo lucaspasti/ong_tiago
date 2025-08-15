@@ -1,4 +1,5 @@
 import Link from "next/link"
+
 import { User } from "lucide-react"
 
 export function NavbarGestao() {

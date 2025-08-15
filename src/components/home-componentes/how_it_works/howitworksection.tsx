@@ -1,7 +1,6 @@
 import { StepItem } from "./stepitem";
 import { EquipmentItem } from "./equipmentitem";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWheelchair, faCrutch, faPersonWalkingWithCane, faPersonWalking } from '@fortawesome/free-solid-svg-icons'
 
 export function HowItWorksSection() {

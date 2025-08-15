@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import clsx from "clsx"
 
 type Aba = "estoque" | "beneficiarios" | "emprestimos" | "historico" | "relatorios"

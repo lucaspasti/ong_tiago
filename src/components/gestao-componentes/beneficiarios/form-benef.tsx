@@ -78,6 +78,7 @@ export function FormBenef({ adicionarBeneficiario }: FormBeneficiarioProps) {
           <input
             type={type}
             name={name}
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             value={(form as any)[name]}
             onChange={handleChange}
             required={required}
