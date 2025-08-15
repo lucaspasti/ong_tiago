@@ -1,6 +1,7 @@
 import Link from "next/link"
 
 import { User } from "lucide-react"
+import { Button } from "@/components/ui/button";
 
 export function NavbarGestao() {
   return (
@@ -22,6 +23,13 @@ export function NavbarGestao() {
           <div className="bg-blue-500 p-2 rounded-full">
             <User className="text-white w-6 h-6" />
           </div>
+          <Link href="/">
+            <Button
+                className="flex items-center gap-6 text-lg bg-blue-500 h-8"
+              >
+                Sair
+            </Button>
+          </Link>
         </div>
       </div>
       {/* Linha azul abaixo da navbar */}
