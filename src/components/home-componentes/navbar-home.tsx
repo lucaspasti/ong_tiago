@@ -50,10 +50,12 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Button className="flex items-center gap-2 text-xl bg-blue-500 h-10">
-            <LogIn size={14} />
-            Entrar
-          </Button>
+          <Link href="/gestao">
+            <Button className="flex items-center gap-2 text-xl bg-blue-500 h-10">
+              <LogIn size={14} />
+              Entrar
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
